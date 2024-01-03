@@ -1,18 +1,10 @@
-#include <bits/stdc++.h>
-using namespace std;
 
+
+#include <iostream>
+using namespace std;
 int main()
 {
-
-    int num;
-    cout << "Enter num value: " << endl;
-    cin >> num;
-
-    while (num)
-    {
-        cout << num << endl;
-        num--;
-    }
-
-    return 0;
+    int a, b;
+    int c = a + b;
+    cout << c << endl;
 }
