@@ -1,35 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
 
-class Solution
+int main()
 {
-public:
-    int numberOfArithmeticSlices(vector<int> &nums)
-    {
-        int n = nums.size();
-        int ans = 0;
 
-        vector<unordered_map<int, int>> dp(n);
+  int a, b;
+  cout << "Enter a and b : " << endl;
+  cin >> a >> b;
+  int c = a + b;
+  cout << c << endl;
+  int d = a - b;
+  cout << "Substration is : " << endl;
 
-        for (int i = 1; i < n; ++i)
-        {
-            for (int j = 0; j < i; ++j)
-            {
-                long long diff = static_cast<long long>(nums[i]) - nums[j];
-
-                if (diff > INT_MAX || diff < INT_MIN)
-                    continue;
-
-                int diff_int = static_cast<int>(diff);
-
-                dp[i][diff_int] += 1;
-
-                if (dp[j].count(diff_int))
-                {
-                    dp[i][diff_int] += dp[j][diff_int];
-                    ans += dp[j][diff_int];
-                }
-            }
-        }
-
-        return ans;
-    }
-};
+  return 0;
+}
